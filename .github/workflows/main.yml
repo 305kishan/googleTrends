@@ -2,7 +2,7 @@ name: run google-trends.py
 
 on:
   schedule:
-    - cron: '35 13 * * *' # Runs every day at 18:00
+    - cron: '41 14 * * *' # Runs every day at 18:00
 
 jobs:
   build:
@@ -22,9 +22,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute py script # run google-trends.py
+      - name: execute py script # run google_trends.py
           
-        run: python google-trends.py
+        run: python google_trends.py
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           LOCATION: ${{ secrets.LOCATION }}
