@@ -2,7 +2,7 @@ name: run google-trends.py
 
 on:
   schedule:
-    - cron: '07 15 * * *' # Runs every day at 18:00
+    - cron: '30 15 * * *' # Runs every day at 21:00 PM IST
 
 jobs:
   build:
