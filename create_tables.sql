@@ -1,0 +1,34 @@
+CREATE TABLE IF NOT EXISTS daily_searches (
+    id SERIAL PRIMARY KEY,
+    date DATE NOT NULL,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS searches (
+    id SERIAL PRIMARY KEY,
+    daily_search_id INTEGER REFERENCES daily_searches(id) ON DELETE CASCADE,
+    query VARCHAR(500) NOT NULL,
+    google_trends_link VARCHAR(1000) NOT NULL,
+    traffic INTEGER NOT NULL,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS related_queries (
+    id SERIAL PRIMARY KEY,
+    search_id INTEGER REFERENCES searches(id) ON DELETE CASCADE,
+    query VARCHAR(500) NOT NULL,
+    google_trends_link VARCHAR(1000) NOT NULL,
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS articles (
+    id SERIAL PRIMARY KEY,
+    search_id INTEGER REFERENCES searches(id) ON DELETE CASCADE,
+    title VARCHAR(500) NOT NULL,
+    link VARCHAR(1000) NOT NULL,
+    snippet TEXT,
+    source VARCHAR(1000),
+    time_ago VARCHAR(100),
+    thumbnail VARCHAR(1000),
+    created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
