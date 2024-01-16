@@ -1,7 +1,9 @@
 # Trending Google Search Python Script
 
 ## Overview
-This repository contains a Python script designed to fetch trending Google searches for a specific region using the Google Search API. The retrieved data is stored seamlessly in a PostgreSQL database hosted on Aiven cloud, providing a robust and scalable solution for tracking and analyzing search trends.
+This repository contains a Python script designed to fetch trending Google searches for a specific region using the [Google Search API](https://serpapi.com/google-trends-trending-now). The retrieved data is stored seamlessly in a PostgreSQL database hosted on [Aiven Cloud](https://docs.aiven.io/docs/platform/concepts/free-plan#free-plans), providing a robust and scalable solution for tracking and analyzing search trends.
+
+#### All the services (Cloud Database + API + Server to run script) used in this project are always free to use.
 
 ## Features
 * Google Search API Integration: Utilizes the Google Search API to fetch real-time trending searches.
