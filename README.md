@@ -1,5 +1,7 @@
 # Python Script to fetch and store Daily Trending Searches on Google
 
+### [View Data on Kaggle](https://www.kaggle.com/datasets/kishan305/whats-trending-google-india)
+
 ## Overview
 This repository contains a Python script designed to fetch trending Google searches for a specific region using the [Google Search API](https://serpapi.com/google-trends-trending-now). The retrieved data is stored seamlessly in a PostgreSQL database hosted on [Aiven Cloud](https://docs.aiven.io/docs/platform/concepts/free-plan#free-plans), providing a robust and scalable solution for tracking and analyzing search trends.
 
