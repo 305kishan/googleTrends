@@ -1,5 +1,3 @@
-# Python Script to fetch and store Daily Trending Searches on Google
-
 ### [View Data on Kaggle](https://www.kaggle.com/datasets/kishan305/whats-trending-google-india)
 
 ## Overview
